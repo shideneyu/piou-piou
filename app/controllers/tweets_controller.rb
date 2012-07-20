@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
   # GET /tweets
   # GET /tweets.json
   def index
-    @tweets = Tweet.order('created_at DESC')
+    @tweets = Tweet.order('created_at DESC').page(params[:page]).per(5)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -23,7 +23,7 @@ class TweetsController < ApplicationController
   # POST /tweets
   # POST /tweets.json
   def create
-    @tweets = Tweet.order('created_at DESC')
+    @tweets = Tweet.order('created_at DESC').page(params[:page]).per(5)
     @tweet = Tweet.new(params[:tweet])
 
     respond_to do |format|
