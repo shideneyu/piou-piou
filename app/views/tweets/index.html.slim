@@ -1,0 +1,44 @@
+- model_class = Tweet.new.class
+- tweet_model_class = Tweet.new.class
+
+- if @tweet && @tweet.errors.any?
+  div class="alert alert-error"
+    table
+      a class="close" data-dismiss="alert" 
+            '×
+      - @tweet.errors.messages[:content].each do |message|
+        tr
+          td
+            = message
+- flash.each do |name, msg|
+  - if msg == 'Tweet successfully created.'
+    div class="alert alert-success"
+      a class="close" data-dismiss="alert" 
+        '×
+      = msg
+  - elsif msg == 'The tweet has been removed from the database.'
+    div class="alert alert-error"
+      a class="close" data-dismiss="alert" 
+        '×
+      = msg
+
+div class="page-header"
+h1
+  = t '.title', :default => t('helpers.titles.new', :model => tweet_model_class.model_name.human, :default => "New #{model_class.model_name.human}")
+= render :partial => 'form'
+div class="page-header"
+  h1
+    =t '.title', :default => model_class.model_name.human.pluralize
+  - @tweets.each do |tweet|
+    ul style="list-style-type:none;"
+      li
+        div class="well"
+          p
+            = tweet.content
+            = link_to t('.destroy', default: t("helpers.links.destroy")),
+                tweet_path(tweet),
+                :method => :delete,
+                :confirm => t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')),
+                class: 'btn btn-mini btn-danger'
+          time(datetime="#{tweet.created_at.iso8601}")
+            = distance_of_time_in_words_to_now(tweet.created_at)

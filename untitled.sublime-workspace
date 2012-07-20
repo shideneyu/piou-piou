@@ -1,0 +1,1333 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"jauge",
+				"jauge-euros"
+			],
+			[
+				"jau",
+				"jauge-temps"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"current",
+				"current_real_amount"
+			],
+			[
+				"pr",
+				"price_max"
+			],
+			[
+				"proje",
+				"projectb"
+			],
+			[
+				"sear",
+				"search"
+			],
+			[
+				"fac",
+				"FactoryGirl"
+			],
+			[
+				"project",
+				"project_page"
+			],
+			[
+				"user",
+				"user"
+			],
+			[
+				"tes",
+				"testimonial"
+			],
+			[
+				"find",
+				"find_by_id"
+			],
+			[
+				"req",
+				"req2"
+			],
+			[
+				"date",
+				"datedebutres"
+			],
+			[
+				"erad",
+				"eradressemail"
+			],
+			[
+				"pass",
+				"password_salt"
+			],
+			[
+				"loca",
+				"Location"
+			],
+			[
+				"if",
+				"if?	$… = ( … ) ? … : …"
+			],
+			[
+				"stat",
+				"status"
+			],
+			[
+				"redir",
+				"redirect"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/views/tweets/index.html.slim",
+			"settings":
+			{
+				"buffer_size": 1512,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/tweets/_form.html.slim",
+			"settings":
+			{
+				"buffer_size": 187,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/controllers/tweets_controller_spec.rb",
+			"settings":
+			{
+				"buffer_size": 4335,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/tweets_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1268,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/sidney/projects/rails/ressources/old/twitter/app/controllers/tweets_controller.rb",
+			"settings":
+			{
+				"buffer_size": 527,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/tweets/show.html.slim",
+			"settings":
+			{
+				"buffer_size": 591,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 1851,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "class TweetsController < ApplicationController\n  # GET /tweets\n  # GET /tweets.json\n  def index\n    @tweets = Tweet.all\n\n    respond_to do |format|\n      format.html # index.html.erb\n      format.json { render json: @tweets }\n    end\n  end\n\n  # GET /tweets/1\n  # GET /tweets/1.json\n  def show\n    @tweet = Tweet.find(params[:id])\n\n    respond_to do |format|\n      format.html # show.html.erb\n      format.json { render json: @tweet }\n    end\n  end\n  # POST /tweets\n  # POST /tweets.json\n  def create\n    @tweet = Tweet.new(params[:tweet])\n\n    respond_to do |format|\n      if @tweet.save\n        format.html { redirect_to tweets_url, notice: 'Tweet successfully created.' }\n        format.json { render json: @tweet, status: :created, location: @tweet }\n      else\n        format.html { render action: \"new\" }\n        format.json { render json: @tweet.errors, status: :unprocessable_entity }\n      end\n    end\n  end\n\n  # DELETE /tweets/1\n  # DELETE /tweets/1.json\n  def destroy\n    @tweet = Tweet.find(params[:id])\n    @tweet.destroy\n\n    respond_to do |format|\n      format.html { redirect_to tweets_url, notice: 'The tweet has been removed from the database.' }\n      format.json { head :no_content }\n    end\n  end\nend\n",
+			"settings":
+			{
+				"buffer_size": 1221,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "- if @tweet && @tweet.errors.any?\n  div class=\"alert alert-error\"\n    table\n      a class=\"close\" data-dismiss=\"alert\" \n            '×\n      - @tweet.errors.messages[:content].each do |message|\n        tr\n          td\n            = message\n- flash.each do |name, msg|\n  - if msg == 'Tweet successfully created.'\n    div class=\"alert alert-success\"\n      a class=\"close\" data-dismiss=\"alert\" \n        '×\n      = msg\n  - elsif msg == 'The tweet has been removed from the database.'\n    div class=\"alert alert-error\"\n      a class=\"close\" data-dismiss=\"alert\" \n        '×\n      = msg\n",
+			"settings":
+			{
+				"buffer_size": 581,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/sidney/projects/rails/piou-piou/app/assets/javascripts/application.js",
+		"/home/sidney/projects/rails/ressources/old/twitter/app/views/tweets/_form.html.slim",
+		"/home/sidney/projects/rails/ressources/old/twitter/app/models/tweet.rb",
+		"/home/sidney/projects/rails/piou-piou/app/models/tweet.rb",
+		"/home/sidney/projects/rails/piou-piou/app/views/tweets/_form.html.slim",
+		"/home/sidney/projects/rails/ressources/old/twitter/app/views/tweets/index.html.slim",
+		"/home/sidney/projects/rails/ressources/old/twitter/app/views/tweets/show.html.slim",
+		"/home/sidney/projects/rails/ressources/old/twitter/app/views/layouts/application.html.slim",
+		"/home/sidney/projects/rails/ressources/old/twitter/app/views/tweets/_form.html.erb",
+		"/home/sidney/projects/rails/ressources/old/twitter/app/views/tweets/index.html.erb",
+		"/home/sidney/projects/rails/piou-piou/spec/models/tweet_spec.rb",
+		"/home/sidney/projects/rails/piou-piou/spec/routing/tweets_routing_spec.rb",
+		"/home/sidney/projects/rails/ressources/old/twitter/app/controllers/tweets_controller.rb",
+		"/home/sidney/projects/rails/piou-piou/app/views/tweets/new.html.slim",
+		"/home/sidney/projects/rails/piou-piou/app/views/tweets/_form.2.html.erb",
+		"/home/sidney/projects/rails/piou-piou/app/views/tweets/_form.html.erb",
+		"/home/sidney/projects/rails/piou-piou/app/views/tweets/index.html.erb",
+		"/home/sidney/projects/rails/piou-piou/config/routes.rb",
+		"/home/sidney/projects/rails/piou-piou/app/controllers/tweets_controller.rb",
+		"/home/sidney/projects/rails/piou-piou/app/views/tweets/show.html.erb",
+		"/home/sidney/projects/rails/piou-piou/app/views/tweets/new.html.erb",
+		"/home/sidney/projects/rails/ressources/old/twitter/config/routes.rb",
+		"/home/sidney/projects/rails/piou-piou/config/environments/development.rb",
+		"/home/sidney/projects/rails/piou-piou/config/application.rb",
+		"/home/sidney/projects/rails/piou-piou/Gemfile",
+		"/home/sidney/projects/rails/piou-piou/app/views/tweets/index.html.slim",
+		"/home/sidney/projects/rails/piou-piou/app/views/tweets/show.html.slim",
+		"/home/sidney/projects/rails/piou-piou/app/views/layouts/application.html.slim",
+		"/home/sidney/projects/rails/piou-piou/app/views/tweets/edit.html.erb",
+		"/home/sidney/projects/rails/piou-piou/app/views/tweets/edit.html.slim",
+		"/home/sidney/projects/rails/piou-piou/spec/views/tweets/edit.html.erb_spec.rb",
+		"/home/sidney/projects/rails/piou-piou/spec/views/tweets/index.html.erb_spec.rb",
+		"/home/sidney/projects/rails/piou-piou/.gitignore",
+		"/home/sidney/projects/rails/piou-piou/public/index.html",
+		"/home/sidney/projects/rails/ressources/old/twitter/config/application.rb",
+		"/home/sidney/projects/rails/piou-piou/app/controllers/application_controller.rb",
+		"/home/sidney/projects/rails/ressources/old/twitter/app/controllers/application_controller.rb",
+		"/home/sidney/projects/rails/piou-piou/spec/controllers/tweets_controller_spec.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/Gemfile",
+		"/home/sidney/projects/rails/ressources/old/twitter/Gemfile",
+		"/home/sidney/projects/rails/piou-piou/spec/controllers/piou_controller_spec.rb",
+		"/home/sidney/projects/rails/piou-piou/spec/helpers/piou_helper_spec.rb",
+		"/home/sidney/projects/rails/piou-piou/spec/views/piou/index.html.erb_spec.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/spec/spec_helper.rb",
+		"/home/sidney/projects/rails/piou-piou/spec/spec_helper.rb",
+		"/home/sidney/projects/rails/ressources/old/twitter/spec/routing/tweets_routing_spec.rb",
+		"/home/sidney/projects/rails/shidotweet/config/routes.rb",
+		"/home/sidney/projects/rails/shideneyu.github.com/Gemfile",
+		"/home/sidney/projects/rails/shideneyu.github.com/app/views/layouts/application.html.slim",
+		"/home/sidney/projects/rails/shideneyu.github.com/config/routes.rb",
+		"/home/sidney/projects/rails/shidotweet/Gemfile",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/project_pages/index.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/projects/_search_form.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/testimonials/_lightbox_testimonial.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/models/testimonial.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/project_pages/show.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/project_pages/widget.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/project_pages/show/_widget_infos.html.haml",
+		"/home/sidney/Bureau/projet.html",
+		"/home/sidney/projects/rails/spear/spear-v2/app/controllers/projects_controller.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/testimonials/_form.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/controllers/project_pages_controller.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/app/models/project.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/spec/controllers/project_pages_controller_spec.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/app/controllers/categories_controller.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/public/assets/ckeditor/plugins/templates/dialogs/templates.js",
+		"/home/sidney/projects/rails/spear/spear-v2/app/helpers/projects_helper.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/app/helpers/categories_helper.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/spec/factories/projects.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/app/controllers/testimonials_controller.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/config/locales/fr.yml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/layouts/_form_errors.html.erb",
+		"/home/sidney/projects/rails/shidotweet/app/controllers/application_controller.rb",
+		"/home/sidney/projects/rails/shidotweet/config/application.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/projects/show.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/public/assets/ckeditor/filebrowser/javascripts/jquery.tmpl.min.js.gz",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/layouts/widget.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/config/routes.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/app/assets/javascripts/application.js",
+		"/home/sidney/projects/rails/spear/spear-v2/app/assets/stylesheets/v2/widget.css",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/profiles/_form.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/models/project_page.rb",
+		"/home/sidney/Informatique/BTS/ressources/PPE/Projets/projet4-javascript/spearform.html",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/layouts/v2/_header.html.haml",
+		"/home/sidney/Informatique/BTS/ressources/PPE/Projets/projet4-javascript/index (copie).html",
+		"/home/sidney/Informatique/BTS/ressources/PPE/Projets/projet4-javascript/index.html",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/project_pages/show/_box_informations.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/questions/_lightbox_display.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/questions/_lightbox_ask.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/spec/support/controller_macros.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/app/helpers/subscriptions_helper.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/project_pages/_project_page.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/helpers/application_helper.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/spec/factories/users.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/layouts/partials/_testimonials.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/testimonials/_testimonial.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/projects/_large_project.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/helpers/profiles_helper.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/config/locales/translation_fr.yml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/models/categories_projects.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/config/database.yml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/models/category.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/test/fixtures/categories_projects.yml",
+		"/home/sidney/projects/rails/spear/spear-v2/spec/requests/searches_spec.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/Gemfile.lock",
+		"/home/sidney/projects/rails/spear/spear-v2/spec/routing/project_pages_routing_spec.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/payments/_documents_transmission.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/spec/factories/project_pages.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/spec/routing/searches_routing_spec.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/config/locales/static_pages.fr.yml",
+		"/home/sidney/projects/rails/spear/spear-v2/config/locales/routes.fr.yml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/users/index/_moneylender_search.html.haml",
+		"/home/sidney/projects/rails/spear/spear-v2/app/assets/stylesheets/v2/style.css.less",
+		"/home/sidney/projects/rails/spear/spear-v2/app/style.css",
+		"/home/sidney/projects/rails/spear/spear-v2/Rakefile",
+		"/home/sidney/projects/rails/spear/spear-v2/app/controllers/searches_controller.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/spec/models/project_pages_controller_spec.rb",
+		"/home/sidney/projects/rails/inad/spec/models/article_spec.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/spec/models/project_page.rb",
+		"/home/sidney/projects/rails/spear/spear-v2/app/views/searches/index.html.haml",
+		"/home/sidney/projects/rails/inad/spec/models/comment_spec.rb",
+		"/home/sidney/projects/rails/inad/spec/models/art_spec.rb",
+		"/home/sidney/projects/rails/inad/spec/models/professional_spec.rb",
+		"/home/sidney/projects/rails/inad/spec/models/privacy_spec.rb",
+		"/home/sidney/projects/rails/inad/spec/models/event_spec.rb",
+		"/home/sidney/projects/rails/inad/spec/models/category_spec.rb",
+		"/home/sidney/projects/rails/inad/spec/models/admin_user_spec.rb",
+		"/home/sidney/projects/rails/inad/spec/models/notification_spec.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/home/sidney/projects/rails/spear/spear-v2",
+			"/home/sidney/projects/rails/spear",
+			"/home/sidney/projects/rails/spear/spear-v2/app/views",
+			"/home/sidney/projects/rails/spear/spear-v2",
+			"/home/sidney/projects/rails/spear/spear-v2/app/admin",
+			"/home/sidney/projects/rails/spear/spear-v2",
+			"/home/sidney/projects/rails/spear/spear-v2/app/admin",
+			"/home/sidney/projects/rails/spear/spear-v2/app",
+			"/home/sidney/projects/rails/spear/spear-v2/app/admin",
+			"/home/sidney/projects/rails/spear/spear-v2",
+			"/home/sidney/projects/spear-v2",
+			"/home/sidney/projects/rails/twitter",
+			"/home/sidney/projects/rails/spear/spear-v2"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"{}",
+			"The tweet has been removed from the database",
+			"should_eq",
+			"edit",
+			"'\n",
+			"edit",
+			" @",
+			"edit",
+			"{config.active_record.whitelist_attributes ",
+			"slider3.png",
+			"sissaoui",
+			"helpers",
+			"project",
+			"position du projet",
+			"widget",
+			"mon profil",
+			"iframe frameborder='0'",
+			"iframe",
+			"project_profile_picture",
+			"043C83",
+			"#f46638;",
+			".finance",
+			"h2",
+			".euro ",
+			"left",
+			"icon",
+			".blue ",
+			"bold",
+			"euro.png",
+			"euro",
+			"widget/bo",
+			"bo",
+			"widget",
+			"iframe",
+			"widget/",
+			".png",
+			"bo",
+			".png",
+			"#send_testimonial",
+			"testimo",
+			"informations",
+			"send_testimonial",
+			"editer mon témoignage",
+			"email",
+			"forgot_password",
+			"mot de passe oublié ?",
+			"echo",
+			"print",
+			"saisi",
+			"position du projet",
+			"    font-weight: bold;",
+			"bold",
+			".orange",
+			".orange {\n  color: #F49930;\n}",
+			"left",
+			".left",
+			"a",
+			"h2 a",
+			".h2 ",
+			".image",
+			"image-description",
+			"box.infos.",
+			"box.infos.ask",
+			"poser une question",
+			"questions posees",
+			"voir les questions",
+			"project_profile_picture(project.user)",
+			"link_to image_tag",
+			"projet",
+			"project",
+			"image_tag",
+			"image",
+			"mon",
+			"mon profil",
+			"\n",
+			"profile_picture",
+			"project_profile_picture",
+			"creator-avatar",
+			"link",
+			"project",
+			"image-descri",
+			"img",
+			"finance",
+			"témoignages",
+			"finance",
+			"online",
+			"?",
+			"sousci",
+			"auteur",
+			"descri",
+			"jauge-",
+			".left",
+			"jauges",
+			"jauge",
+			";\n",
+			"left",
+			".left",
+			"left",
+			"span",
+			"hover",
+			"left",
+			"jauge-euro",
+			".jauge-euro",
+			".jauge",
+			".jauge-temps",
+			".jauge-euro",
+			".jauges-euro",
+			".jauges",
+			"jauge-euro",
+			"jauge-euros",
+			"jauge-eur",
+			"current-pos",
+			"cursor",
+			"jauge",
+			"  position: relative;",
+			"jauge-temps",
+			"jauge-temps.hover",
+			"j-",
+			"div",
+			"td",
+			"px",
+			"block",
+			"finance",
+			"color",
+			"#969696",
+			"color:",
+			"finance",
+			".finance"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"245f77",
+			"2b6d88",
+			"4a94ba",
+			"3a94ba",
+			"#3a94ba;",
+			"widget/bo/",
+			"widget/bo",
+			"assigns(:projects).",
+			"searches",
+			"lightbox_testimonial",
+			"'green'",
+			"green",
+			"numero",
+			"POST['editer']",
+			"$_POST['editer']"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/views/tweets/index.html.slim",
+					"settings":
+					{
+						"buffer_size": 1512,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								338,
+								338
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/fredwu-ruby-slim-tmbundle-6c25f81/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 151.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/tweets/_form.html.slim",
+					"settings":
+					{
+						"buffer_size": 187,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								112,
+								112
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/fredwu-ruby-slim-tmbundle-6c25f81/Syntaxes/Ruby Slim.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "spec/controllers/tweets_controller_spec.rb",
+					"settings":
+					{
+						"buffer_size": 4335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3675,
+								3675
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1443.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/tweets_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1208,
+								1208
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 305.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/sidney/projects/rails/ressources/old/twitter/app/controllers/tweets_controller.rb",
+					"settings":
+					{
+						"buffer_size": 527,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								75,
+								75
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/tweets/show.html.slim",
+					"settings":
+					{
+						"buffer_size": 591,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								208,
+								208
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/fredwu-ruby-slim-tmbundle-6c25f81/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 1851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								506,
+								506
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"settings":
+					{
+						"buffer_size": 1221,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1221,
+								1221
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"settings":
+					{
+						"buffer_size": 581,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								581,
+								581
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/fredwu-ruby-slim-tmbundle-6c25f81/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"form",
+				"app/views/tweets/_form.html.slim"
+			],
+			[
+				"modeltweet",
+				"app/models/tweet.rb"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"form.slim",
+				"app/views/tweets/_form.html.slim"
+			],
+			[
+				"tweetcontr",
+				"app/controllers/tweets_controller.rb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"index.",
+				"app/views/tweets/index.html.erb"
+			],
+			[
+				"index.erb",
+				"app/views/tweets/index.html.erb"
+			],
+			[
+				"applica",
+				"config/application.rb"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"index",
+				"app/views/tweets/index.html.slim"
+			],
+			[
+				"edit.erb",
+				"app/views/tweets/edit.html.erb"
+			],
+			[
+				"erb",
+				"config/environments/development.rb"
+			],
+			[
+				"",
+				".gitignore"
+			],
+			[
+				".erb",
+				"app/views/tweets/_form.html.erb"
+			],
+			[
+				"show.htm",
+				"app/views/tweets/show.html.erb"
+			],
+			[
+				"application",
+				"piou-piou/config/application.rb"
+			],
+			[
+				"applic",
+				"twitter/config/application.rb"
+			],
+			[
+				"tweet",
+				"piou-piou/app/models/tweet.rb"
+			],
+			[
+				"pioupioucontroller",
+				"piou-piou/app/controllers/tweets_controller.rb"
+			],
+			[
+				"pioupioucontro",
+				"piou-piou/app/controllers/application_controller.rb"
+			],
+			[
+				"controller",
+				"twitter/app/controllers/application_controller.rb"
+			],
+			[
+				"routes",
+				"twitter/config/routes.rb"
+			],
+			[
+				"gemfi",
+				"twitter/Gemfile"
+			],
+			[
+				"piourou",
+				"piou-piou/config/routes.rb"
+			],
+			[
+				"routes.rb",
+				"shidotweet/config/routes.rb"
+			],
+			[
+				"tweetindex",
+				"twitter/app/views/tweets/index.html.slim"
+			],
+			[
+				"projectpageindex",
+				"spear-v2/app/views/project_pages/index.html.haml"
+			],
+			[
+				"projectform",
+				"spear-v2/app/views/projects/_search_form.html.haml"
+			],
+			[
+				"controllerspec",
+				"spear-v2/spec/controllers/project_pages_controller_spec.rb"
+			],
+			[
+				"speccontroller",
+				"spear-v2/app/controllers/categories_controller.rb"
+			],
+			[
+				"gem",
+				"shidotweet/Gemfile"
+			],
+			[
+				"gemlist",
+				"spear-v2/public/assets/ckeditor/plugins/templates/dialogs/templates.js"
+			],
+			[
+				"wid",
+				"spear-v2/app/views/project_pages/widget.html.haml"
+			],
+			[
+				"modeltestimo",
+				"spear-v2/app/models/testimonial.rb"
+			],
+			[
+				"projectpagecontrol",
+				"spear-v2/app/controllers/project_pages_controller.rb"
+			],
+			[
+				"modelproject",
+				"spear-v2/app/models/project.rb"
+			],
+			[
+				"projectpagecontroll",
+				"spear-v2/app/controllers/project_pages_controller.rb"
+			],
+			[
+				"modeltesti",
+				"spear-v2/app/models/testimonial.rb"
+			],
+			[
+				"controllertestimo",
+				"spear-v2/app/controllers/testimonials_controller.rb"
+			],
+			[
+				"fr.y",
+				"spear-v2/config/locales/fr.yml"
+			],
+			[
+				"layoutform",
+				"spear-v2/app/views/layouts/_form_errors.html.erb"
+			],
+			[
+				"testimonialform",
+				"spear-v2/app/views/testimonials/_form.html.haml"
+			],
+			[
+				"lightboxtest",
+				"spear-v2/app/views/testimonials/_lightbox_testimonial.html.haml"
+			],
+			[
+				"modeltestim",
+				"spear-v2/app/models/testimonial.rb"
+			],
+			[
+				"appcontroll",
+				"shidotweet/app/controllers/application_controller.rb"
+			],
+			[
+				"app.r",
+				"shidotweet/config/application.rb"
+			],
+			[
+				"projectcontroll",
+				"spear-v2/app/controllers/projects_controller.rb"
+			],
+			[
+				"projet",
+				"spear-v2/public/assets/ckeditor/filebrowser/javascripts/jquery.tmpl.min.js.gz"
+			],
+			[
+				"widget",
+				"spear-v2/app/views/project_pages/widget.html.haml"
+			],
+			[
+				"projectpagecontr",
+				"app/controllers/project_pages_controller.rb"
+			],
+			[
+				"lightboxtes",
+				"app/views/testimonials/_lightbox_testimonial.html.haml"
+			],
+			[
+				"showbox",
+				"app/views/project_pages/show/_box_informations.html.haml"
+			],
+			[
+				"widgetcss",
+				"app/assets/stylesheets/v2/widget.css"
+			],
+			[
+				"modelprojectpage",
+				"app/models/project_page.rb"
+			],
+			[
+				"widgetht",
+				"app/views/project_pages/widget.html.haml"
+			],
+			[
+				"projectpage",
+				"app/views/project_pages/_project_page.html.haml"
+			],
+			[
+				"testimonial",
+				"app/views/testimonials/_testimonial.html.haml"
+			],
+			[
+				"large_",
+				"app/views/projects/_large_project.html.haml"
+			],
+			[
+				"projectsearch",
+				"app/views/projects/_search_form.html.haml"
+			],
+			[
+				"widgethtml",
+				"app/views/layouts/widget.html.haml"
+			],
+			[
+				"widge",
+				"app/assets/stylesheets/v2/widget_kisskiss.css"
+			],
+			[
+				"project_pagewid",
+				"app/views/project_pages/widget.html.haml"
+			],
+			[
+				"modelprojec",
+				"app/models/project.rb"
+			],
+			[
+				"specproject",
+				"spec/controllers/project_pages_controller_spec.rb"
+			],
+			[
+				"configdb",
+				"config/database.yml"
+			],
+			[
+				"testimoniallig",
+				"app/views/testimonials/_lightbox_testimonial.html.haml"
+			],
+			[
+				"modelcategor",
+				"app/models/categories_projects.rb"
+			],
+			[
+				"testimonialli",
+				"app/views/testimonials/_lightbox_testimonial.html.haml"
+			],
+			[
+				"speccontrolle",
+				"spec/controllers/project_pages_controller_spec.rb"
+			],
+			[
+				"modelprojectpag",
+				"app/models/project_page.rb"
+			],
+			[
+				"modelprojectpa",
+				"app/models/project_page.rb"
+			],
+			[
+				"pec/controllers/project_pages_controller_spec.rb",
+				"spec/controllers/project_pages_controller_spec.rb"
+			],
+			[
+				"app/controllers/project_pages_controller.r",
+				"app/controllers/project_pages_controller.rb"
+			],
+			[
+				"p/views/project_pages/index.html.ha",
+				"app/views/project_pages/index.html.haml"
+			],
+			[
+				"projectpageco",
+				"app/controllers/project_pages_controller.rb"
+			],
+			[
+				"ec/controllers/project_pages_controller_spec.rb",
+				"spec/controllers/project_pages_controller_spec.rb"
+			],
+			[
+				"projectpagecon",
+				"app/controllers/project_pages_controller.rb"
+			],
+			[
+				"pec/requests/searches_spec.rb",
+				"spec/requests/searches_spec.rb"
+			],
+			[
+				"ge",
+				"Gemfile"
+			],
+			[
+				"projectpagerb",
+				"app/models/project_page.rb"
+			],
+			[
+				"specrouting",
+				"spec/routing/project_pages_routing_spec.rb"
+			],
+			[
+				"spec",
+				"spec/requests/searches_spec.rb"
+			],
+			[
+				"projectcontrol",
+				"app/controllers/project_pages_controller.rb"
+			],
+			[
+				"controllerprojectpage",
+				"app/controllers/project_pages_controller.rb"
+			],
+			[
+				"projectcontrollerspec",
+				"spec/controllers/project_pages_controller_spec.rb"
+			],
+			[
+				"projectpa",
+				"app/models/project_page.rb"
+			],
+			[
+				"projectpagespec",
+				"spec/controllers/project_pages_controller_spec.rb"
+			],
+			[
+				"projectpageinde",
+				"app/views/project_pages/index.html.haml"
+			],
+			[
+				"projectpagecontro",
+				"app/controllers/project_pages_controller.rb"
+			],
+			[
+				"config/locale",
+				"config/locales/translation_fr.yml"
+			],
+			[
+				"fr.",
+				"config/locales/fr.yml"
+			],
+			[
+				"testiform",
+				"app/views/testimonials/_form.html.haml"
+			],
+			[
+				"testimoniallightbox",
+				"app/views/testimonials/_lightbox_testimonial.html.haml"
+			],
+			[
+				"testimonialcon",
+				"app/controllers/testimonials_controller.rb"
+			],
+			[
+				"projectpagecont",
+				"app/controllers/project_pages_controller.rb"
+			],
+			[
+				"testimonialcontr",
+				"app/controllers/testimonials_controller.rb"
+			],
+			[
+				"testimonialco",
+				"app/controllers/testimonials_controller.rb"
+			],
+			[
+				"searchcontr",
+				"app/controllers/searches_controller.rb"
+			],
+			[
+				"projectpageshow",
+				"app/views/project_pages/show.html.haml"
+			],
+			[
+				"viewprojectpage",
+				"app/views/project_pages/_project_page.html.haml"
+			],
+			[
+				"projects_page",
+				"app/views/project_pages/_project_page.html.haml"
+			],
+			[
+				"searchcontrol",
+				"/home/sidney/projects/rails/spear/spear-v2/spec/controllers/searches_controller_spec.rb"
+			],
+			[
+				"searchspec",
+				"spec/requests/searches_spec.rb"
+			],
+			[
+				"testimoniallightb",
+				"app/views/testimonials/_lightbox_testimonial.html.haml"
+			],
+			[
+				"sch",
+				"db/schema.rb"
+			],
+			[
+				"sche",
+				"db/schema.rb"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"follow",
+				"app/models/follow.rb"
+			],
+			[
+				"searc",
+				"app/controllers/searches_controller.rb"
+			],
+			[
+				"searchc",
+				"app/controllers/searches_controller.rb"
+			],
+			[
+				"searchcont",
+				"app/controllers/searches_controller.rb"
+			],
+			[
+				"categoriesproject",
+				"spec/factories/categories_projects.rb"
+			],
+			[
+				"viewproject",
+				"app/views/project_pages/_project_page.html.haml"
+			],
+			[
+				"search",
+				"app/controllers/searches_controller.rb"
+			],
+			[
+				"project",
+				"app/models/project.rb"
+			],
+			[
+				"modelfoll",
+				"app/models/follow.rb"
+			],
+			[
+				"projec",
+				"app/models/project.rb"
+			],
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"specsear",
+				"spec/controllers/searches_controller_spec.rb"
+			],
+			[
+				"databa",
+				"config/database.yml"
+			],
+			[
+				"categ",
+				"app/models/category.rb"
+			],
+			[
+				"pp/views/searches/index.html.haml",
+				"app/views/searches/index.html.haml"
+			],
+			[
+				"categoriesprojects",
+				"app/models/categories_projects.rb"
+			],
+			[
+				"catego",
+				"app/models/category.rb"
+			],
+			[
+				"searchcontrollerspec",
+				"spec/controllers/searches_controller_spec.rb"
+			],
+			[
+				"specsearc",
+				"spec/requests/searches_spec.rb"
+			],
+			[
+				"gemf",
+				"Gemfile.lock"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 227.0,
+	"status_bar_visible": true
+}
