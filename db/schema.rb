@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20120713130744) do
 
   create_table "tweets", :force => true do |t|
-    t.string   "content"
+    t.string   "content",    :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
