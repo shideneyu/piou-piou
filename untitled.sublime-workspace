@@ -92,10 +92,18 @@
 	"buffers":
 	[
 		{
+			"file": "spec/controllers/tweets_controller_spec.rb",
+			"settings":
+			{
+				"buffer_size": 4335,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/views/tweets/index.html.slim",
 			"settings":
 			{
-				"buffer_size": 1512,
+				"buffer_size": 1556,
 				"line_ending": "Unix"
 			}
 		},
@@ -108,18 +116,10 @@
 			}
 		},
 		{
-			"file": "spec/controllers/tweets_controller_spec.rb",
-			"settings":
-			{
-				"buffer_size": 4335,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/controllers/tweets_controller.rb",
 			"settings":
 			{
-				"buffer_size": 1268,
+				"buffer_size": 1343,
 				"line_ending": "Unix"
 			}
 		},
@@ -148,18 +148,34 @@
 			}
 		},
 		{
-			"contents": "class TweetsController < ApplicationController\n  # GET /tweets\n  # GET /tweets.json\n  def index\n    @tweets = Tweet.all\n\n    respond_to do |format|\n      format.html # index.html.erb\n      format.json { render json: @tweets }\n    end\n  end\n\n  # GET /tweets/1\n  # GET /tweets/1.json\n  def show\n    @tweet = Tweet.find(params[:id])\n\n    respond_to do |format|\n      format.html # show.html.erb\n      format.json { render json: @tweet }\n    end\n  end\n  # POST /tweets\n  # POST /tweets.json\n  def create\n    @tweet = Tweet.new(params[:tweet])\n\n    respond_to do |format|\n      if @tweet.save\n        format.html { redirect_to tweets_url, notice: 'Tweet successfully created.' }\n        format.json { render json: @tweet, status: :created, location: @tweet }\n      else\n        format.html { render action: \"new\" }\n        format.json { render json: @tweet.errors, status: :unprocessable_entity }\n      end\n    end\n  end\n\n  # DELETE /tweets/1\n  # DELETE /tweets/1.json\n  def destroy\n    @tweet = Tweet.find(params[:id])\n    @tweet.destroy\n\n    respond_to do |format|\n      format.html { redirect_to tweets_url, notice: 'The tweet has been removed from the database.' }\n      format.json { head :no_content }\n    end\n  end\nend\n",
+			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 1221,
+				"buffer_size": 1213,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "- if @tweet && @tweet.errors.any?\n  div class=\"alert alert-error\"\n    table\n      a class=\"close\" data-dismiss=\"alert\" \n            '×\n      - @tweet.errors.messages[:content].each do |message|\n        tr\n          td\n            = message\n- flash.each do |name, msg|\n  - if msg == 'Tweet successfully created.'\n    div class=\"alert alert-success\"\n      a class=\"close\" data-dismiss=\"alert\" \n        '×\n      = msg\n  - elsif msg == 'The tweet has been removed from the database.'\n    div class=\"alert alert-error\"\n      a class=\"close\" data-dismiss=\"alert\" \n        '×\n      = msg\n",
+			"file": "app/models/tweet.rb",
 			"settings":
 			{
-				"buffer_size": 581,
+				"buffer_size": 340,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/factories/tweets.rb",
+			"settings":
+			{
+				"buffer_size": 73,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/models/factories.rb",
+			"settings":
+			{
+				"buffer_size": 301,
 				"line_ending": "Unix"
 			}
 		}
@@ -188,6 +204,12 @@
 	},
 	"file_history":
 	[
+		"/home/sidney/projects/rails/piou-piou/db/schema.rb",
+		"/home/sidney/projects/rails/piou-piou/spec/models/factories.rb",
+		"/home/sidney/projects/rails/piou-piou/spec/factories/articles.rb",
+		"/home/sidney/projects/rails/piou-piou/spec/factories/tweets.rb",
+		"/home/sidney/projects/rails/piou-piou/app/views/kaminari/_prev_page.html.erb",
+		"/home/sidney/projects/rails/spear/spear-v2/Gemfile",
 		"/home/sidney/projects/rails/piou-piou/app/assets/javascripts/application.js",
 		"/home/sidney/projects/rails/ressources/old/twitter/app/views/tweets/_form.html.slim",
 		"/home/sidney/projects/rails/ressources/old/twitter/app/models/tweet.rb",
@@ -226,7 +248,6 @@
 		"/home/sidney/projects/rails/piou-piou/app/controllers/application_controller.rb",
 		"/home/sidney/projects/rails/ressources/old/twitter/app/controllers/application_controller.rb",
 		"/home/sidney/projects/rails/piou-piou/spec/controllers/tweets_controller_spec.rb",
-		"/home/sidney/projects/rails/spear/spear-v2/Gemfile",
 		"/home/sidney/projects/rails/ressources/old/twitter/Gemfile",
 		"/home/sidney/projects/rails/piou-piou/spec/controllers/piou_controller_spec.rb",
 		"/home/sidney/projects/rails/piou-piou/spec/helpers/piou_helper_spec.rb",
@@ -310,12 +331,7 @@
 		"/home/sidney/projects/rails/spear/spear-v2/app/views/searches/index.html.haml",
 		"/home/sidney/projects/rails/inad/spec/models/comment_spec.rb",
 		"/home/sidney/projects/rails/inad/spec/models/art_spec.rb",
-		"/home/sidney/projects/rails/inad/spec/models/professional_spec.rb",
-		"/home/sidney/projects/rails/inad/spec/models/privacy_spec.rb",
-		"/home/sidney/projects/rails/inad/spec/models/event_spec.rb",
-		"/home/sidney/projects/rails/inad/spec/models/category_spec.rb",
-		"/home/sidney/projects/rails/inad/spec/models/admin_user_spec.rb",
-		"/home/sidney/projects/rails/inad/spec/models/notification_spec.rb"
+		"/home/sidney/projects/rails/inad/spec/models/professional_spec.rb"
 	],
 	"find":
 	{
@@ -506,23 +522,51 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 9,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/tweets/index.html.slim",
+					"file": "spec/controllers/tweets_controller_spec.rb",
 					"settings":
 					{
-						"buffer_size": 1512,
+						"buffer_size": 4335,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								338,
-								338
+								3675,
+								3675
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/tweets/index.html.slim",
+					"settings":
+					{
+						"buffer_size": 1556,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1556,
+								1556
 							]
 						],
 						"settings":
@@ -532,13 +576,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 151.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "app/views/tweets/_form.html.slim",
 					"settings":
 					{
@@ -564,47 +608,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "spec/controllers/tweets_controller_spec.rb",
-					"settings":
-					{
-						"buffer_size": 4335,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3675,
-								3675
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1443.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 3,
 					"file": "app/controllers/tweets_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1268,
+						"buffer_size": 1343,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1208,
-								1208
+								619,
+								619
 							]
 						],
 						"settings":
@@ -614,7 +630,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 305.0,
+						"translation.y": 561.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -631,8 +647,8 @@
 						"selection":
 						[
 							[
-								75,
-								75
+								305,
+								305
 							]
 						],
 						"settings":
@@ -705,24 +721,49 @@
 				},
 				{
 					"buffer": 7,
+					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 1221,
+						"buffer_size": 1213,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1221,
-								1221
+								1208,
+								1208
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 610.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/models/tweet.rb",
+					"settings":
+					{
+						"buffer_size": 340,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -731,25 +772,50 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
+					"file": "spec/factories/tweets.rb",
 					"settings":
 					{
-						"buffer_size": 581,
+						"buffer_size": 73,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								581,
-								581
+								61,
+								61
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/fredwu-ruby-slim-tmbundle-6c25f81/Syntaxes/Ruby Slim.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "spec/models/factories.rb",
+					"settings":
+					{
+						"buffer_size": 301,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								300
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -802,6 +868,30 @@
 		"selected_items":
 		[
 			[
+				"twee",
+				"app/models/tweet.rb"
+			],
+			[
+				"sch",
+				"db/schema.rb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"kaminari",
+				"app/views/kaminari/_prev_page.html.erb"
+			],
+			[
+				"gemfi",
+				"Gemfile"
+			],
+			[
 				"form",
 				"app/views/tweets/_form.html.slim"
 			],
@@ -836,10 +926,6 @@
 			[
 				"applica",
 				"config/application.rb"
-			],
-			[
-				"gemfile",
-				"Gemfile"
 			],
 			[
 				"index",
@@ -892,10 +978,6 @@
 			[
 				"routes",
 				"twitter/config/routes.rb"
-			],
-			[
-				"gemfi",
-				"twitter/Gemfile"
 			],
 			[
 				"piourou",
@@ -1222,10 +1304,6 @@
 				"app/views/testimonials/_lightbox_testimonial.html.haml"
 			],
 			[
-				"sch",
-				"db/schema.rb"
-			],
-			[
 				"sche",
 				"db/schema.rb"
 			],
@@ -1300,18 +1378,6 @@
 			[
 				"catego",
 				"app/models/category.rb"
-			],
-			[
-				"searchcontrollerspec",
-				"spec/controllers/searches_controller_spec.rb"
-			],
-			[
-				"specsearc",
-				"spec/requests/searches_spec.rb"
-			],
-			[
-				"gemf",
-				"Gemfile.lock"
 			]
 		],
 		"width": 0.0

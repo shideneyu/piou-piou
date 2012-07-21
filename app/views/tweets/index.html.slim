@@ -22,13 +22,13 @@
         '×
       = msg
 
-div class="page-header"
+
 h1
-  = t '.title', :default => t('helpers.titles.new', :model => tweet_model_class.model_name.human, :default => "New #{model_class.model_name.human}")
+  'Piou-Piou
+
+div class="page-header"
 = render :partial => 'form'
 div class="page-header"
-  h1
-    =t '.title', :default => model_class.model_name.human.pluralize
   - @tweets.each do |tweet|
     ul style="list-style-type:none;"
       li

@@ -34,9 +34,9 @@ describe TweetsController do
     {}
   end
 
-  let(:tweet) { Tweet.create! valid_attributes }
-
   describe "GET index" do
+    let(:tweet) { Tweet.create! valid_attributes }
+
     it "assigns all tweets as @tweets" do
       get :index, {}, valid_session
       assigns(:tweets).should eq([tweet])
@@ -44,6 +44,8 @@ describe TweetsController do
   end
 
   describe "GET show" do
+    let(:tweet) { Tweet.create! valid_attributes }
+
     it "assigns the requested tweet as @tweet" do
       get :show, {id: tweet}, valid_session
       assigns(:tweet).should eq(tweet)
@@ -51,6 +53,8 @@ describe TweetsController do
   end
 
   describe "POST create" do
+    let(:tweet) { Tweet.create! valid_attributes }
+
     describe "with valid params" do
       it "creates a new Tweet" do
         expect {
@@ -100,23 +104,26 @@ describe TweetsController do
   end
 
   describe "DELETE destroy" do
+    before do
+      @tweet = Tweet.create! valid_attributes
+    end
+
     it "destroys the requested tweet" do
       expect {
-        delete :destroy, {:id => tweet.to_param}, valid_session
+        delete :destroy, {:id => @tweet.to_param}, valid_session
       }.to change(Tweet, :count).by(-1)
     end
 
     it "should display a notice" do
       expect {
-        delete :destroy, {:id => tweet.to_param}, valid_session
+        delete :destroy, {:id => @tweet.to_param}, valid_session
       }.to change(Tweet, :count).by(-1)
       flash[:notice].should eql('The tweet has been removed from the database.')
 
     end
 
     it "redirects to the tweets list" do
-      tweet = Tweet.create! valid_attributes
-      delete :destroy, {:id => tweet.to_param}, valid_session
+      delete :destroy, {:id => @tweet.to_param}, valid_session
       response.should redirect_to(tweets_url)
     end
   end
