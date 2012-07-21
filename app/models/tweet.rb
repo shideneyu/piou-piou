@@ -9,7 +9,9 @@
 #
 
 class Tweet < ActiveRecord::Base
-  validates :content, presence: :true,
-                      length: { minimum: 3 }
-end
+  attr_accessible :content
 
+  attr_readonly :created_at
+
+  validates :content, presence: :true, length: { minimum: 3 }
+end
