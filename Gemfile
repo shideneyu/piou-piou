@@ -56,6 +56,7 @@ gem 'jquery-rails'
 
 group :test, :development do
     gem 'sqlite3'
+    gem 'debugger'
 end
 
 group :assets do

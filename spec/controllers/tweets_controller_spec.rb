@@ -19,6 +19,7 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe TweetsController do
+  render_views
 
   # This should return the minimal set of attributes required to create a valid
   # Tweet. As you add validations to Tweet, be sure to
@@ -35,20 +36,36 @@ describe TweetsController do
   end
 
   describe "GET index" do
-    let(:tweet) { Tweet.create! valid_attributes }
+    before do
+      @tweet = Tweet.create! valid_attributes
+    end
 
     it "assigns all tweets as @tweets" do
-      get :index, {}, valid_session
-      assigns(:tweets).should eq([tweet])
+      get :index, {format: "json"}, valid_session
+      assigns(:tweets).should eq([@tweet])
+      JSON.load(response.body).should be_an(Array)
+      JSON.load(response.body).first.keys.sort.should == ["content", "created_at", "id", "updated_at"]
+      JSON.load(response.body).first["content"].class.should == String
+      JSON.load(response.body).first["created_at"].class.should == String
+      JSON.load(response.body).first["id"].class.should == Fixnum
+      JSON.load(response.body).first["updated_at"].class.should == String
     end
   end
 
   describe "GET show" do
-    let(:tweet) { Tweet.create! valid_attributes }
+    before do
+      @tweet = Tweet.create! valid_attributes
+    end
 
     it "assigns the requested tweet as @tweet" do
-      get :show, {id: tweet}, valid_session
-      assigns(:tweet).should eq(tweet)
+      get :show, {id: @tweet, format: "json"}, valid_session
+      assigns(:tweet).should eq(@tweet)
+      JSON.load(response.body).should be_a(Hash)
+      JSON.load(response.body).keys.sort.should == ["content", "created_at", "id", "updated_at"]
+      JSON.load(response.body)["content"].class.should == String
+      JSON.load(response.body)["created_at"].class.should == String
+      JSON.load(response.body)["id"].class.should == Fixnum
+      JSON.load(response.body)["updated_at"].class.should == String
     end
   end
 
