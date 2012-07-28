@@ -45,10 +45,10 @@ describe TweetsController do
       assigns(:tweets).should eq([@tweet])
       JSON.load(response.body).should be_an(Array)
       JSON.load(response.body).first.keys.sort.should == ["content", "created_at", "id", "updated_at"]
-      JSON.load(response.body).first["content"].class.should == String
-      JSON.load(response.body).first["created_at"].class.should == String
-      JSON.load(response.body).first["id"].class.should == Fixnum
-      JSON.load(response.body).first["updated_at"].class.should == String
+      JSON.load(response.body).first["content"].should be_a(String)
+      JSON.load(response.body).first["created_at"].should be_a(String)
+      JSON.load(response.body).first["id"].should be_a(Fixnum)
+      JSON.load(response.body).first["updated_at"].should be_a(String)
     end
   end
 
@@ -62,10 +62,10 @@ describe TweetsController do
       assigns(:tweet).should eq(@tweet)
       JSON.load(response.body).should be_a(Hash)
       JSON.load(response.body).keys.sort.should == ["content", "created_at", "id", "updated_at"]
-      JSON.load(response.body)["content"].class.should == String
-      JSON.load(response.body)["created_at"].class.should == String
-      JSON.load(response.body)["id"].class.should == Fixnum
-      JSON.load(response.body)["updated_at"].class.should == String
+      JSON.load(response.body)["content"].should be_a(String)
+      JSON.load(response.body)["created_at"].should be_a(String)
+      JSON.load(response.body)["id"].should be_a(Fixnum)
+      JSON.load(response.body)["updated_at"].should be_a(String)
     end
   end
 
