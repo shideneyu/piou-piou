@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+//= require moment
+//= require livestamp
+//= require mustache

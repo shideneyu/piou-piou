@@ -1,5 +1,7 @@
+ 
 - model_class = Tweet.new.class
 - tweet_model_class = Tweet.new.class
+
 
 - if @tweet && @tweet.errors.any?
   div class="alert alert-error"
@@ -29,19 +31,8 @@ h1
 div class="page-header"
 = render :partial => 'form'
 div class="page-header"
-  - @tweets.each do |tweet|
-    ul style="list-style-type:none;"
-      li
-        div class="well"
-          p
-            = tweet.content
-          = link_to t('.destroy', default: t("helpers.links.destroy")),
-              tweet_path(tweet),
-              :method => :delete,
-              :confirm => t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')),
-              class: 'btn btn-mini btn-danger'
-          '  
-          time(datetime="#{tweet.created_at.iso8601}")
-            = distance_of_time_in_words_to_now(tweet.created_at)
-            '  ago
-  = paginate @tweets
+  div id="tweets-display"
+  script id="tweets" type="text/html"
+        = render 'tweet'
+
+= paginate @tweets

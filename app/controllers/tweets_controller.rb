@@ -13,7 +13,7 @@ class TweetsController < ApplicationController
   # POST /tweets
   # POST /tweets.json
   def create
-    @tweets = Tweet.order('created_at DESC').page(params[:page]).per(5)
+    @tweets = Tweet.order('created_at DESC').page(params[:page])
     @tweet = Tweet.new(params[:tweet])
 
     respond_to do |format|
