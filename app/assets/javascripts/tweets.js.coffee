@@ -15,23 +15,17 @@ class ProductsPager
   render: (tweets) =>
     if tweets[0]
       for tweet_attributes in tweets
-        tweet = new Tweets(tweet_attributes)
-        template = $("#tweets-display").html()
-        $('#tweets-display').append Mustache.to_html($('#tweets').html(), tweet)
+        this.tweets(tweet_attributes)
     else
-        tweet = new Tweet(tweets)
-        template = $("#tweets-display").html()
-        $('#tweets-display').append Mustache.to_html($('#tweets').html(), tweet)
+      this.tweets(tweets)
+
+  tweets: (tweets) =>
+    tweet = new Tweets(tweets)
+    template = $("#tweets-display").html()
+    $('#tweets-display').append Mustache.to_html($('#tweets').html(), tweet)
 
 class Tweets
   constructor: (@attributes) ->
   id: -> @attributes.id
   content: -> @attributes.content
   created_at: -> @attributes.created_at
-
-class Tweet
-  constructor: (@attributes) ->
-  id: -> @attributes.id
-  content: -> @attributes.content
-  created_at: -> @attributes.created_at
-  back: -> "lol"

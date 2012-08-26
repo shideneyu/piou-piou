@@ -5,5 +5,5 @@ div class="page-header"
 
 script id="tweets" type="text/html"
   = render 'tweet'
-
+  = link_to t('.back', :default => t("helpers.links.back")), tweets_path, :class => 'btn'
 div id="tweets-display"
