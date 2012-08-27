@@ -7,7 +7,7 @@ jQuery ->
 
 class ProductsPager
   constructor: ->
-    this.check()
+    this.waitformsg()
 
   check: =>
     $.getJSON(window.location, @render)
@@ -23,6 +23,24 @@ class ProductsPager
     tweet = new Tweets(tweets)
     template = $("#tweets-display").html()
     $('#tweets-display').append Mustache.to_html($('#tweets').html(), tweet)
+
+  waitformsg: =>
+    self = this
+    $.ajax
+      type: "GET"
+      ifModified: true
+      url: "http://0.0.0.0:3000/tweets.json"
+      async: true
+      cache: true
+      success: (data, textStatus, jqXHR) ->
+        if textStatus == "notmodified"
+          setTimeout self.waitformsg(), 2000
+        else
+          $('#tweets-display li').remove();
+          self.check()
+          self.waitformsg()
+      error: (XMLHttpRequest, textStatus, errorThrown) ->
+        self.waitformsg()
 
 class Tweets
   constructor: (@attributes) ->

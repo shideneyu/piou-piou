@@ -33,6 +33,7 @@ div class="page-header"
 div class="page-header"
   div id="tweets-display"
   script id="tweets" type="text/html"
-    = render 'tweet'
+    ul style="list-style-type:none;"
+      = render 'tweet'
 
 = paginate @tweets
